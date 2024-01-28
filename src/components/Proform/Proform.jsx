@@ -2,12 +2,17 @@ import { extras, plans, data } from './data.jsx';
 
 function Proform() {
     let typesOptions = data.map(datum => <option value={datum.id} key={datum.id}>{datum.title}</option>);
-    let planOptions = plans.map(planum => <option value={planum.name} key={planum.name}>{planum.value}</option>);
+    let planOptions = plans.map((planum, idx) => <option value={idx} key={planum.name}>{planum.name}</option>);
     const selectedType = (event) => {
 	    let value = event.target.value
 	    let type = data[value]
 	    let extra = extras[value]
 	    alert( `${type.title} $${extra.value}` )
+	}
+    const selectedPlan = (event) => {
+	    let value = event.target.value
+	    let plan = plans[value]
+	    alert( `${plan.name}` )
 	}
     return (
         <section>
@@ -29,7 +34,7 @@ function Proform() {
                         <select 
                         className="form-select form-select-sm" 
                         aria-label=".form-select-sm example"
-                        defaultValue={-1}>
+                        defaultValue={-1} onChange={selectedPlan}>
                             <option value={-1} disabled>Seleccione un plan de pago</option>
                             {planOptions}
                         </select>
