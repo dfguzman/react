@@ -41,9 +41,9 @@ function Table() {
             <thead>
               <tr>
                 <th scope="row" className="text-start" style={{ width: "34%" }} />
-                <th scope="row" className="text-start" style={{ width: "22%" }}>Mensual</th>
-                <th scope="row" className="text-start" style={{ width: "22%" }}>Semestral</th>
-                <th scope="row" className="text-start" style={{ width: "22%" }}>Anual</th>
+                <th scope="row"  style={{ width: "22%" }}>Mensual</th>
+                <th scope="row"  style={{ width: "22%" }}>Semestral</th>
+                <th scope="row"  style={{ width: "22%" }}>Anual</th>
               </tr>
             </thead>
             <tbody>

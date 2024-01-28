@@ -5,9 +5,9 @@ function Data({ data }) {
   return (
     <tr>
       <td>{data.title}</td>
-      <td>{data.options[0] == 0 ? "" : svg}</td>
-      <td>{data.options[1] == 0 ? "" : svg}</td>
-      <td>{data.options[2] == 0 ? "" : svg}</td>
+      <td className="text-start">{data.options[0] == 0 ? "" : svg}</td>
+      <td className="text-start">{data.options[1] == 0 ? "" : svg}</td>
+      <td className="text-start">{data.options[2] == 0 ? "" : svg}</td>
     </tr>
   );
 }
